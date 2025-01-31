@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@300..700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0%;
+}
+
+body {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 62.5%;
+  background-color: beige;
+}
+
+.tasks-container {
+  width: 95%;
+  max-width: 600px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 0.5rem;
+  padding: 1rem;
+}
+
+.heading {
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+}
+
+.task-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.task-input input {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 1rem;
+  padding: 1rem 0.5rem;
+  border-radius: 10px;
+  width: 50%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: #aaa;
+}
+.task-input button {
+  padding: 1rem 1rem;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  border: none;
+  background-color: rgba(0, 0, 0);
+  color: #fff;
+}
+
+.filter-tasks {
+  display: flex;
+  justify-content: center;
+}
+.filter-tasks select {
+  font-family: "Comfortaa", sans-serif;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.5rem;
+}
+
+.tasks-list .task {
+  font-family: "Comfortaa", sans-serif;
+  width: 80%;
+  display: flex;
+  column-gap: 0.5rem;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+}
+.task-completed {
+  text-decoration: line-through;
+}
+
+@media (max-width: 680px) {
+  .heading {
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+  }
+  .tasks-list .task {
+    font-size: 1.2rem;
+  }
+  .task-input {
+    justify-content: space-evenly;
+  }
+  .task-input input {
+    padding: 0.8rem 0.2rem;
+    flex: 1;
+  }
+  .task-input button {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+  .tasks-list .task {
+    width: 100%;
+  }
+}
